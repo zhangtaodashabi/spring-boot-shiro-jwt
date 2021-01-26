@@ -54,6 +54,9 @@ public class ControllerAspect {
             if(Boolean.TRUE.equals(method.isAnnotationPresent(ParamXssPass.class ))){
                 new ParamXssPassAspect(aspectApi).doHandlerAspect(pjp,method);
             }
+            if(Boolean.TRUE.equals(method.isAnnotationPresent(RepeatSubmit.class))){
+                new RepeatSubmitAspect(aspectApi).doHandlerAspect(pjp,method);
+            }
             //是否需要记录日志
             if(Boolean.TRUE.equals(method.isAnnotationPresent(Log.class))){
                 new RecordLogAspect(aspectApi).doHandlerAspect(pjp,method);

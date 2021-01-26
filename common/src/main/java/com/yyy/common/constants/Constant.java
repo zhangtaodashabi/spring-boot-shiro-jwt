@@ -26,6 +26,10 @@ public class Constant {
     public static final String LINE_ST = System.getProperty("line.separator");
 
     /**
+     * 防重提交 redis key
+     */
+    public static final String REPEAT_SUBMIT_KEY = "repeat_submit:";
+    /**
      * 空字符串
      */
     public static final String EMPTY_STRING = "";
